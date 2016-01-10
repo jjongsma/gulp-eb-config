@@ -31,7 +31,9 @@ module.exports = function(config) {
 
         // Execute module to get settings variables
         var module = { exports: {} };
-        runInNewContext(file.contents, { module: module, exports: module.exports });
+        if (file && file.contents) {
+          runInNewContext(file.contents, { module: module, exports: module.exports, require: require });
+        }
 
         // Add hardcoded settings
         if (config.settings) {
@@ -68,7 +70,13 @@ module.exports = function(config) {
 
   }
 
-  return through.obj(configure);
+  var piped = through.obj(configure);
+
+  piped.run = function(cb) {
+    configure(null, null, cb);
+  }
+
+  return piped;
 
 }
 
