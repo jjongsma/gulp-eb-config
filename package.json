@@ -1,6 +1,6 @@
 {
   "name": "gulp-eb-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Gulp ElasticBeanstalk plugin",
   "main": "index.js",
   "scripts": {
