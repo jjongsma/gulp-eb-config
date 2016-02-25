@@ -1,7 +1,7 @@
 {
   "name": "gulp-eb-config",
-  "version": "1.0.1",
-  "description": "Gulp ElasticBeanstalk plugin",
+  "version": "1.1.0",
+  "description": "Gulp ElasticBeanstalk config generator plugin",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,10 +17,6 @@
   },
   "homepage": "https://github.com/jjongsma/gulp-eb-config#readme",
   "dependencies": {
-    "aws-sdk": "^2.1.39",
-    "gulp-util": "^3.0.6",
-    "lodash": "^3.10.0",
-    "q": "^1.4.1",
-    "through2": "^2.0.0"
+    "gulp-util": "^3.0.6"
   }
 }
