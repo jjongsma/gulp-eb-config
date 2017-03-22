@@ -21,9 +21,9 @@ module.exports = function(config) {
       gutil.log('Using credentials from profile \'' + config.profile + '\'');
     }
 
-    var iam = new AWS.IAM();
+    var sts = new AWS.STS();
 
-    iam.getUser({}, function(err, data) {
+    sts.getCallerIdentity({}, function(err, data) {
 
       if (err) {
         callback(new gutil.PluginError('gulp-eb-config', err));
